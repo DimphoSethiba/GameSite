@@ -1,0 +1,106 @@
+*{
+  margin:0px;
+  border:0px;
+  padding: 0px;
+}
+body{
+  background-image: url(the_croods_movie-2880x1800.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container{
+  display: grid;
+  /*grid-gap: 20px;*/
+  grid-row-gap: 20px;
+  grid-template-areas:
+    "header"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "main"
+    "article"
+    "article"
+    "footer";
+    height:100%;
+}
+
+#container > div{
+
+}
+
+#header{
+  grid-area:header;
+  padding-left: 35px;
+  padding-top:10px;
+  color:White;
+  font-size:65px;
+  background-color: rgba(26, 26, 26, 0.6);
+  font-family:Luckiest Guy;
+}
+.main canvas{
+  background-color: rgba(26, 26, 26, 0.8);
+  width:70%; height:70%;
+}
+.main{
+  padding-left:20px;
+  padding-right:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  grid-area:main;
+}
+
+.article{
+  grid-area:article;
+  color:white;
+  padding-left: 35px;
+  font-size: 20px;
+}
+
+.article h1{
+  font-family: Luckiest Guy;
+}
+
+.footer{
+  grid-area:footer;
+  text-align:center;
+  padding-top: 10px;
+  background-color: rgba(26, 26, 26, 0.6);
+  color:white;
+
+}
+@media (min-width:760px){
+  #container{
+    grid-template-columns: 1fr 4fr 1fr;
+
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "main main main"
+      "main main main"
+      "main main main"
+      "main main main"
+      "main main main"
+      "main main main"
+      "main main main"
+      "article article article"
+      "article article article"
+      "footer footer  footer";
+      height:100%;
+}
+.main canvas{
+  background-color: rgba(26, 26, 26, 0.8);
+  width:90%; height:100%;
+}
+.main{
+  padding-left:0%;
+  padding-right:0%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+}
